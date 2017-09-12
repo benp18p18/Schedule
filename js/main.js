@@ -29,6 +29,7 @@ function afterload(db) {
         <p>Planagram:  <a href = "https://en.wikipedia.org/wiki/Test" target = "_blank">https://en.wikipedia.org/wiki/Test</a></p>\
         </div>\
         </div>\
+        <hr>\
         '
     });
     
@@ -65,7 +66,6 @@ function afterload(db) {
         <input type="text" class="form-control" id="inlineFormInputGroup" data-bind="attr: {placeholder:  Description}">\
         </div>\
         </form>\
-        <hr>\
         ',
     });
     
