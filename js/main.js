@@ -53,17 +53,17 @@ function afterload(db) {
         \
         <label class="mr-sm-2 mt-2" for="inlineFormInputGroup">JDE #</label>\
         <div class="input-group mb-2 mr-sm-2 mb-sm-0 mt-2">\
-        <input type="text" class="form-control" id="inlineFormInputGroup" data-bind="attr: {placeholder: JDE}"}">\
+        <input type="text" class="form-control" id="inlineFormInputGroup" data-bind="value: JDE"}">\
         </div>\
         \
         <label class="mr-sm-2 mt-2" for="inlineFormInputGroup">Duracell #</label>\
         <div class="input-group mb-2 mr-sm-2 mb-sm-0 mt-2">\
-        <input type="text" class="form-control" id="inlineFormInputGroup" data-bind="attr: {placeholder: DUR}">\
+        <input type="text" class="form-control" id="inlineFormInputGroup" data-bind="value: DUR">\
         </div>\
         \
         <label class="mr-sm-2 mt-2" for="inlineFormInputGroup">Description</label>\
         <div class="input-group mb-5 mr-sm-5 mb-sm-0 mt-2">\
-        <input type="text" class="form-control" id="inlineFormInputGroup" data-bind="attr: {placeholder:  Description}">\
+        <input type="text" class="form-control" id="inlineFormInputGroup" data-bind="value:  Description">\
         </div>\
         </form>\
         ',
