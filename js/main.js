@@ -93,7 +93,7 @@ function afterload(db) {
         this.shifts = [
             new Shifts('1st Shift', 'Shift1', '0'),
             new Shifts('2nd Shift', 'Shift2', '1'),
-            new Shifts('3rd Shift', 'Shift3', '2'),
+            // new Shifts('3rd Shift', 'Shift3', '2'),
         ]
     }
     
