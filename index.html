@@ -1,0 +1,179 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Display Schedule</title>
+        <meta name="description" content="A means to effectively communicate the production schedule of the display area of the business.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+        
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <!-- Add your site or application content here -->
+        <nav class="navbar navbar-inverse bg-primary">    
+            <a class="navbar-brand" style = "color: white;" href="#">Sonoco Display Schedule</a>
+        </nav>
+        
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#Sunday">Sunday</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#Monday">Monday</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#Tuesday">Tuesday</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#Wednesday">Wednesday</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#Thursday">Thursday</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#Friday">Friday</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#Saturday">Saturday</a>
+            </li>
+        </ul>
+        
+        <div class="tab-content">
+            </br>
+            <div class="tab-pane active" id="Sunday" role="tabpanel">
+                <div class="container-fluid">
+                    <div data-bind="foreach: lines">
+                        <div class="card line-info">
+                            <div class="card-body">
+                                <h3 data-bind="text: name"></h3>
+                                <hr>
+                                <div data-bind="foreach: $root.shifts">
+                                    <line-shifts params = "name: name, shift: shift, num: $parent.num, line: $parent.id, id: id, day: 'Sunday'"></line-shifts>
+                                    <line-details params="id: id, line: $parent.id, day: 'Sunday' "></line-details>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="Monday" role="tabpanel">
+                <div class="container-fluid">
+                    <div data-bind="foreach: lines">
+                        <div class="card line-info">
+                            <div class="card-body">
+                                <h3 data-bind="text: name"></h3>
+                                <hr>
+                                <div data-bind="foreach: $root.shifts">
+                                    <h4 data-bind="text: name"></h4>
+                                    <line-details params="id: id, line: $parent.id, day: 'Monday'"></line-details>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="Tuesday" role="tabpanel">
+                <div class="container-fluid">
+                    <div data-bind="foreach: lines">
+                        <div class="card line-info">
+                            <div class="card-body">
+                                <h3 data-bind="text: name"></h3>
+                                <hr>
+                                <div data-bind="foreach: $root.shifts">
+                                    <h4 data-bind="text: name"></h4>
+                                    <line-details params="id: id, line: $parent.id, day: 'Tuesday'"></line-details>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="Wednesday" role="tabpanel">
+                <div class="container-fluid">
+                    <div data-bind="foreach: lines">
+                        <div class="card line-info">
+                            <div class="card-body">
+                                <h3 data-bind="text: name"></h3>
+                                <hr>
+                                <div data-bind="foreach: $root.shifts">
+                                    <h4 data-bind="text: name"></h4>
+                                    <line-details params="id: id, line: $parent.id, day: 'Wednesday'"></line-details>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="Thursday" role="tabpanel">
+                <div class="container-fluid">
+                    <div data-bind="foreach: lines">
+                        <div class="card line-info">
+                            <div class="card-body">
+                                <h3 data-bind="text: name"></h3>
+                                <hr>
+                                <div data-bind="foreach: $root.shifts">
+                                    <h4 data-bind="text: name"></h4>
+                                    <line-details params="id: id, line: $parent.id, day: 'Thursday'"></line-details>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="Friday" role="tabpanel">
+                <div class="container-fluid">
+                    <div data-bind="foreach: lines">
+                        <div class="card line-info">
+                            <div class="card-body">
+                                <h3 data-bind="text: name"></h3>
+                                <hr>
+                                <div data-bind="foreach: $root.shifts">
+                                    <h4 data-bind="text: name"></h4>
+                                    <line-details params="id: id, line: $parent.id, day: 'Friday'"></line-details>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="Saturday" role="tabpanel">
+                <div class="container-fluid">
+                    <div data-bind="foreach: lines">
+                        <div class="card line-info">
+                            <div class="card-body">
+                                <h3 data-bind="text: name"></h3>
+                                <hr>
+                                <div data-bind="foreach: $root.shifts">
+                                    <h4 data-bind="text: name"></h4>
+                                    <line-details params="id: id, line: $parent.id, day: 'Saturday'"></line-details>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class = "footer">
+        <footer style = "margin-left: 5%;">
+            <p>&copy; 2017 Sonoco Products Company</p>
+        </footer>
+        
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/knockout-3.4.2.js"></script>
+        <script src="js/pouchdb-6.3.4.min.js"></script>
+        <script src="js/main.js"></script>
+        
+        
+    </body>
+</html>
